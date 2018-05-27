@@ -5,7 +5,9 @@ import java.util.ResourceBundle;
 
 public class View {
     static String MESSAGES_BUNDLE_NAME = "messages";
-    public static final ResourceBundle BUNDLE = ResourceBundle.getBundle(MESSAGES_BUNDLE_NAME, new Locale("en"));
+    public static final ResourceBundle BUNDLE = ResourceBundle.getBundle(MESSAGES_BUNDLE_NAME,
+//            new Locale("en"));
+            new Locale("ua"));
 
     public static final String EQUAL_SING = "=";
     public static final String SPACE_SING = " ";

@@ -6,9 +6,6 @@ public class Controller {
     private Model model;
     private View view;
 
-    public Controller() {
-    }
-
     public Controller(Model model, View view) {
         this.model = model;
         this.view = view;
@@ -19,11 +16,12 @@ public class Controller {
 
         model.setPrimeBar(GlobalConstants.MIN, GlobalConstants.MAX);
         model.setSecretValue();
-        System.out.println(model.getSecretValue());
+//        System.out.println(model.getSecretValue());
 
-        while (!model.checkValue(inputIntValueWithScanner(scanner))) {
+        while (!model.checkValue(inputIntValueWithScanner(scanner))) {        }
 
-        }
+        view.printCongratulation(model);
+        view.printWay(model);
     }
 
     private int inputIntValueWithScanner(Scanner scanner) {

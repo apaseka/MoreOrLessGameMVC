@@ -9,6 +9,13 @@ public class Model {
 private int secretValue;
     private List<Integer> yourWay = new ArrayList<>();
 
+    @Override
+    public String toString() {
+        return "Model{" +
+                "secretValue=" + secretValue +
+                '}';
+    }
+
     public boolean checkValue(int value) {
         yourWay.add(value);
         if (value == secretValue) {

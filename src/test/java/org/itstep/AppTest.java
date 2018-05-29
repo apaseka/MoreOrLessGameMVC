@@ -14,18 +14,30 @@ public class AppTest {
      * Rigorous Test :-)
      */
     @Test
-    public void shouldAnswerWithTrue() {
+    public void randomiserTest() {
+
         Model model = new Model();
         model.setPrimeBar(GlobalConstants.MIN, GlobalConstants.MAX);
-        for (int i = 0; i < 1001; i++) {
+        int[] anArray = new int[1000];
+        int counter = 0;
+
+        for (int i = 0; i < 1000; i++) {
             model.setSecretValue();
-            int a = model.getSecretValue();
-            System.out.println(model.toString());
-            if (a != 0 && a!=100) {
-                if (a == 1 || a == 99) {
-                    assertTrue(true);
-                }
+            anArray[i] = model.getSecretValue();
+        }
+        for (int element : anArray) {
+
+            assert (element != 0);
+            assert (element != 100);
+
+            if (element == 1) {
+                counter++;
+            }
+            if (element == 99) {
+                counter++;
             }
         }
+        assert (counter > 1);
+        System.out.println(counter);
     }
 }

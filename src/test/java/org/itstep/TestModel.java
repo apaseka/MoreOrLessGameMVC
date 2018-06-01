@@ -9,12 +9,12 @@ import java.lang.reflect.Array;
 /**
  * Unit test for simple App.
  */
-public class AppTest {
+public class TestModel {
     /**
      * Rigorous Test :-)
      */
     @Test
-    public void randomiserTest() {
+    public void testSetSecretValue() {
 
         Model model = new Model();
         model.setPrimeBar(GlobalConstants.MIN, GlobalConstants.MAX);
